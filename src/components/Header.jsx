@@ -132,20 +132,11 @@ const Header = () => {
 
   {/* Hover Categories */}
 
-  <div className="col-span-9 flex items-center justify-center gap-8">
+  <div className="col-span-9 flex items-center justify-center gap-5">
 
     <div className="dropdown dropdown-hover">
       <div tabIndex={0} role="button" className="btn btn-ghost">
-        Electronics
-      </div>
-      <ul className="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
-        <li><a>Mobiles</a></li>
-        <li><a>Laptops</a></li>
-      </ul>
-    </div>
-
-    <div className="dropdown dropdown-hover">
-      <div tabIndex={0} role="button" className="btn btn-ghost">
+        <img src="https://api.spicezgold.com/download/file_1734525204708_fash.png" width="20" class="mr-2"></img>
         Fashion
       </div>
       <ul className="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
@@ -156,7 +147,19 @@ const Header = () => {
 
     <div className="dropdown dropdown-hover">
       <div tabIndex={0} role="button" className="btn btn-ghost">
-        Home
+        <img src="https://api.spicezgold.com/download/file_1734525218436_ele.png" width="20" class="mr-2"></img>
+        Electronics
+      </div>
+      <ul className="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
+        <li><a>Mobiles</a></li>
+        <li><a>Laptops</a></li>
+      </ul>
+    </div>
+
+    <div className="dropdown dropdown-hover">
+      <div tabIndex={0} role="button" className="btn btn-ghost">
+        <img src="https://api.spicezgold.com/download/file_1734525255799_beauty.png" width="20" class="mr-2"></img>
+        Bags
       </div>
       <ul className="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
         <li><a>Furniture</a></li>
@@ -165,7 +168,8 @@ const Header = () => {
     </div>
         <div className="dropdown dropdown-hover">
       <div tabIndex={0} role="button" className="btn btn-ghost">
-        Home
+        <img src="https://api.spicezgold.com/download/file_1734525239704_foot.png" width="20" class="mr-2"></img>
+        FootWear
       </div>
       <ul className="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
         <li><a>Furniture</a></li>
@@ -174,7 +178,8 @@ const Header = () => {
     </div>
         <div className="dropdown dropdown-hover">
       <div tabIndex={0} role="button" className="btn btn-ghost">
-        Home
+        <img src="https://api.spicezgold.com/download/file_1734525248057_gro.png" width="20" class="mr-2"></img>
+        Groceries
       </div>
       <ul className="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
         <li><a>Furniture</a></li>
@@ -183,7 +188,8 @@ const Header = () => {
     </div>
         <div className="dropdown dropdown-hover">
       <div tabIndex={0} role="button" className="btn btn-ghost">
-        Home
+        <img src="https://api.spicezgold.com/download/file_1734525255799_beauty.png" width="20" class="mr-2"></img>
+        Beauty
       </div>
       <ul className="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
         <li><a>Furniture</a></li>
@@ -192,7 +198,8 @@ const Header = () => {
     </div>
         <div className="dropdown dropdown-hover">
       <div tabIndex={0} role="button" className="btn btn-ghost">
-        Home
+        <img src="https://api.spicezgold.com/download/file_1734525275367_well.png" width="20" class="mr-2"></img>
+        Wellness
       </div>
       <ul className="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
         <li><a>Furniture</a></li>
