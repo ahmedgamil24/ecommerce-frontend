@@ -1,8 +1,18 @@
 import { FiUser } from "react-icons/fi";
 import { IoIosSearch } from "react-icons/io";
 import Container from "./common/Container";
+import { useState } from "react";
 
 const Header = () => {
+    const [categories, setCategories] = useState([
+        {name: "Fashion", image: "https://api.spicezgold.com/download/file_1734525204708_fash.png"},
+        {name: "Electronics", image: "https://api.spicezgold.com/download/file_1734525218436_ele.png"},
+        {name: "Bags", image: "https://api.spicezgold.com/download/file_1734525255799_beauty.png"},
+        {name: "FootWear", image: "https://api.spicezgold.com/download/file_1734525239704_foot.png"},
+        {name: "Groceries", image: "https://api.spicezgold.com/download/file_1734525248057_gro.png"},
+        {name: "Beauty", image: "https://api.spicezgold.com/download/file_1734525255799_beauty.png"},
+        {name: "Wellness", image: "https://api.spicezgold.com/download/file_1734525275367_well.png"},
+    ])
   return (
     <>
       <div className="topHeader flex justify-center bg-primary w-full ">
@@ -117,95 +127,31 @@ const Header = () => {
         ☰ All Categories
       </div>
 
-      <ul className="dropdown-content menu bg-base-100 rounded-box w-60 p-2 shadow">
-        <li><a>Electronics</a></li>
-        <li><a>Fashion</a></li>
-        <li><a>Home</a></li>
-        <li><a>Sports</a></li>
-        <li><a>Beauty</a></li>
-      </ul>
-
+        <ul className="dropdown-content menu bg-base-100 rounded-box w-60 p-2 shadow">
+            {categories.map( (cat) => (
+                <li key={cat.name}><a>{cat.name}</a></li>
+             ))}  
+        </ul>
     </div>
 
   </div>
-
 
   {/* Hover Categories */}
 
   <div className="col-span-9 flex items-center justify-center gap-5">
 
-    <div className="dropdown dropdown-hover">
+    {categories.map( (cat)=> (
+    <div key={cat.name} className="dropdown dropdown-hover">
       <div tabIndex={0} role="button" className="btn btn-ghost">
-        <img src="https://api.spicezgold.com/download/file_1734525204708_fash.png" width="20" class="mr-2"></img>
-        Fashion
+        <img src={cat.image} width="20" class="mr-2"></img>
+        {cat.name}
       </div>
       <ul className="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
         <li><a>Men</a></li>
         <li><a>Women</a></li>
       </ul>
     </div>
-
-    <div className="dropdown dropdown-hover">
-      <div tabIndex={0} role="button" className="btn btn-ghost">
-        <img src="https://api.spicezgold.com/download/file_1734525218436_ele.png" width="20" class="mr-2"></img>
-        Electronics
-      </div>
-      <ul className="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
-        <li><a>Mobiles</a></li>
-        <li><a>Laptops</a></li>
-      </ul>
-    </div>
-
-    <div className="dropdown dropdown-hover">
-      <div tabIndex={0} role="button" className="btn btn-ghost">
-        <img src="https://api.spicezgold.com/download/file_1734525255799_beauty.png" width="20" class="mr-2"></img>
-        Bags
-      </div>
-      <ul className="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
-        <li><a>Furniture</a></li>
-        <li><a>Decor</a></li>
-      </ul>
-    </div>
-        <div className="dropdown dropdown-hover">
-      <div tabIndex={0} role="button" className="btn btn-ghost">
-        <img src="https://api.spicezgold.com/download/file_1734525239704_foot.png" width="20" class="mr-2"></img>
-        FootWear
-      </div>
-      <ul className="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
-        <li><a>Furniture</a></li>
-        <li><a>Decor</a></li>
-      </ul>
-    </div>
-        <div className="dropdown dropdown-hover">
-      <div tabIndex={0} role="button" className="btn btn-ghost">
-        <img src="https://api.spicezgold.com/download/file_1734525248057_gro.png" width="20" class="mr-2"></img>
-        Groceries
-      </div>
-      <ul className="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
-        <li><a>Furniture</a></li>
-        <li><a>Decor</a></li>
-      </ul>
-    </div>
-        <div className="dropdown dropdown-hover">
-      <div tabIndex={0} role="button" className="btn btn-ghost">
-        <img src="https://api.spicezgold.com/download/file_1734525255799_beauty.png" width="20" class="mr-2"></img>
-        Beauty
-      </div>
-      <ul className="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
-        <li><a>Furniture</a></li>
-        <li><a>Decor</a></li>
-      </ul>
-    </div>
-        <div className="dropdown dropdown-hover">
-      <div tabIndex={0} role="button" className="btn btn-ghost">
-        <img src="https://api.spicezgold.com/download/file_1734525275367_well.png" width="20" class="mr-2"></img>
-        Wellness
-      </div>
-      <ul className="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
-        <li><a>Furniture</a></li>
-        <li><a>Decor</a></li>
-      </ul>
-    </div>
+    ) )}
 
   </div>
 
