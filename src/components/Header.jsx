@@ -5,10 +5,10 @@ import { useState } from "react";
 
 const Header = () => {
     const [categories, setCategories] = useState([
-        {name: "Fashion", image: "https://api.spicezgold.com/download/file_1734525204708_fash.png"},
-        {name: "Electronics", image: "https://api.spicezgold.com/download/file_1734525218436_ele.png"},
-        {name: "Bags", image: "https://api.spicezgold.com/download/file_1734525255799_beauty.png"},
-        {name: "FootWear", image: "https://api.spicezgold.com/download/file_1734525239704_foot.png"},
+        {name: "Fashion", subCategories: ["Men", "Women"], image: "https://api.spicezgold.com/download/file_1734525204708_fash.png"},
+        {name: "Electronics", subCategories: ["Laptops", "Cameras"], image: "https://api.spicezgold.com/download/file_1734525218436_ele.png"},
+        {name: "Bags", subCategories: ["Men Bags", "Women Bags"], image: "https://api.spicezgold.com/download/file_1734525255799_beauty.png"},
+        {name: "FootWear", subCategories: ["Men FootWear", "Women FootWear"], image: "https://api.spicezgold.com/download/file_1734525239704_foot.png"},
         {name: "Groceries", image: "https://api.spicezgold.com/download/file_1734525248057_gro.png"},
         {name: "Beauty", image: "https://api.spicezgold.com/download/file_1734525255799_beauty.png"},
         {name: "Wellness", image: "https://api.spicezgold.com/download/file_1734525275367_well.png"},
@@ -143,12 +143,13 @@ const Header = () => {
     {categories.map( (cat)=> (
     <div key={cat.name} className="dropdown dropdown-hover">
       <div tabIndex={0} role="button" className="btn btn-ghost">
-        <img src={cat.image} width="20" class="mr-2"></img>
+        <img src={cat.image} width="20" className="mr-2" />
         {cat.name}
       </div>
       <ul className="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
-        <li><a>Men</a></li>
-        <li><a>Women</a></li>
+        {cat.subCategories?.map( (sub, i) => (
+            <li key={i}><a>{sub}</a></li>
+        ) )}
       </ul>
     </div>
     ) )}
