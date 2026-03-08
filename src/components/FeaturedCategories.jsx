@@ -17,10 +17,10 @@ const FeaturedCategories = () => {
     <>
         <Container>
             <div>Featured Categories</div>
-            <div className='flex justify-between items-center'>
+            <div className='flex justify-around gap-2 items-center'>
                 {featuredCategories.map( (c) => (
                     <div key={c.name} >
-                        <div className=' border-2 border-gray-200 rounded-4xl'>
+                        <div className=' border-2 px-5 py-5 border-gray-200 rounded-full'>
                             <img src={c.image} className='w-17.75 h-17.75 max-w-17.75 max-h-17.75'/>
                         </div>
                         <h6>{c.name}</h6>
