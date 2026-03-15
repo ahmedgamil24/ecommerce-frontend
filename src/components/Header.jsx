@@ -116,7 +116,7 @@ const Header = () => {
 
 {/* Categories Bar */}
 
-<div className="grid grid-cols-12 gap-3 items-center border-b border-gray-200 py-2">
+<div className="grid grid-cols-12 gap-3 items-center py-2">
     
 
   {/* Categories Dropdown */}

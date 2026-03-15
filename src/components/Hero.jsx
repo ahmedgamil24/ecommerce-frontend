@@ -1,46 +1,51 @@
-import React from 'react'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Hero = () => {
-  return (
-    <div className="carousel w-full">
-  <div id="slide1" className="carousel-item relative w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-      className="w-full" />
-    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide4" className="btn btn-circle">❮</a>
-      <a href="#slide2" className="btn btn-circle">❯</a>
-    </div>
-  </div>
-  <div id="slide2" className="carousel-item relative w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-      className="w-full" />
-    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide1" className="btn btn-circle">❮</a>
-      <a href="#slide3" className="btn btn-circle">❯</a>
-    </div>
-  </div>
-  <div id="slide3" className="carousel-item relative w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-      className="w-full" />
-    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide2" className="btn btn-circle">❮</a>
-      <a href="#slide4" className="btn btn-circle">❯</a>
-    </div>
-  </div>
-  <div id="slide4" className="carousel-item relative w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-      className="w-full" />
-    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide3" className="btn btn-circle">❮</a>
-      <a href="#slide1" className="btn btn-circle">❯</a>
-    </div>
-  </div>
-</div>
-  )
-}
 
-export default Hero
+  const heroImages = [
+    "https://api.spicezgold.com/download/file_1734524985581_NewProject(11).jpg",
+    "https://api.spicezgold.com/download/file_1734524930884_NewProject(6).jpg",
+    "https://api.spicezgold.com/download/file_1734524878924_1721277298204_banner.jpg",
+    "https://api.spicezgold.com/download/file_1734525002307_1723967638078_slideBanner1.6bbeed1a0c8ffb494f7c.jpg",
+    "https://api.spicezgold.com/download/file_1734524971122_NewProject(8).jpg",
+    "https://api.spicezgold.com/download/file_1734525014348_NewProject(7).jpg"
+  ];
+
+  return (
+    <>
+      <div className="mb-4 border-t border-gray-200"></div>
+
+      <div className="w-full mb-4">
+
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 3000 }}
+          loop
+          className="rounded-xl overflow-hidden"
+        >
+
+          {heroImages.map((img, index) => (
+            <SwiperSlide key={index}>
+              <img
+                src={img}
+                loading="lazy"
+                className="w-full   max-h-[500px] rounded-2xl object-cover"
+              />
+            </SwiperSlide>
+          ))}
+
+        </Swiper>
+
+      </div>
+    </>
+  );
+};
+
+export default Hero;
