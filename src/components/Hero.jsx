@@ -36,7 +36,7 @@ const Hero = () => {
               <img
                 src={img}
                 loading="lazy"
-                className="w-full   max-h-[500px] rounded-2xl object-cover"
+                className="w-full   max-h-125 rounded-2xl object-cover"
               />
             </SwiperSlide>
           ))}
