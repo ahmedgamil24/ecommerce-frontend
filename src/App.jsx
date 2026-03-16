@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Header from "./components/Header";
 import FeaturedCategories from "./components/FeaturedCategories";
 import Hero from "./components/Hero";
+import NewsLetter from "./components/NewsLetter";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       </Routes>
       <Hero />
       <FeaturedCategories />
+      <NewsLetter />
     </>
   );
 }
