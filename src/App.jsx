@@ -6,6 +6,7 @@ import FeaturedCategories from "./components/FeaturedCategories";
 import Hero from "./components/Hero";
 import NewsLetter from "./components/NewsLetter";
 import Footer from "./components/Footer";
+import FeaturedProducts from "./components/FeaturedProducts";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       </Routes>
       <Hero />
       <FeaturedCategories />
+      <FeaturedProducts />
       <NewsLetter />
       <Footer />
     </>
