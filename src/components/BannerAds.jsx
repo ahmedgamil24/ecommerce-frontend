@@ -1,4 +1,5 @@
 import React from 'react'
+import Container from './common/Container'
 
 const BannerAds = () => {
     const images = [
@@ -7,13 +8,15 @@ const BannerAds = () => {
         {src: "https://api.spicezgold.com/download/file_1734525855497_banner-5.jpg"},
     ]
   return (
-    <div>
+    <Container>
+    <div className='flex justify-between items-center gap-3 '>
         {images.map((img) => (
             <div key={img.src}>
-                <img src={img.src} alt="banner image" />
+                <img className='max-h-45.75 rounded-2xl' src={img.src} alt="banner image" />
             </div>
         ))}
     </div>
+    </Container>
   )
 }
 
